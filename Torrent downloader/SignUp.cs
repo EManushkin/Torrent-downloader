@@ -17,6 +17,7 @@ namespace Torrent_downloader
             InitializeComponent();
             SetPlaceHolder(tbEmail, "   Email");
             SetPlaceHolder(tbPassword, "   Password (+6 Characters)");
+
         }
 
         public void SetPlaceHolder(Control control, string PlaceHolderText)

@@ -8,6 +8,7 @@ namespace Torrent_downloader
 {
     static class Program
     {
+        static public TorrentDownloader formTorrentDownloader;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,8 @@ namespace Torrent_downloader
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            formTorrentDownloader = new TorrentDownloader();
+            Application.Run(formTorrentDownloader);
         }
     }
 }

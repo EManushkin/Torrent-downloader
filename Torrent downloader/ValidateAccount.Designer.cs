@@ -100,7 +100,7 @@
             this.btnContinue.Image = ((System.Drawing.Image)(resources.GetObject("btnContinue.Image")));
             this.btnContinue.Location = new System.Drawing.Point(15, 259);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(170, 45);
+            this.btnContinue.Size = new System.Drawing.Size(171, 46);
             this.btnContinue.TabIndex = 19;
             this.btnContinue.TabStop = false;
             this.btnContinue.UseVisualStyleBackColor = true;

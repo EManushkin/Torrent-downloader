@@ -52,13 +52,14 @@
             this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContinue.FlatAppearance.BorderSize = 0;
             this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnContinue.Image = ((System.Drawing.Image)(resources.GetObject("btnContinue.Image")));
-            this.btnContinue.Location = new System.Drawing.Point(215, 201);
+            this.btnContinue.Location = new System.Drawing.Point(214, 201);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(170, 45);
+            this.btnContinue.Size = new System.Drawing.Size(171, 46);
             this.btnContinue.TabIndex = 11;
             this.btnContinue.TabStop = false;
-            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.UseVisualStyleBackColor = false;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // label3

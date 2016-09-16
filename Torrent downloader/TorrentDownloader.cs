@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Torrent_downloader
 {
@@ -35,6 +36,9 @@ namespace Torrent_downloader
 
         }
 
+
+
+
         public void SetPlaceHolder(Control control, string PlaceHolderText)
         {
             control.Text = PlaceHolderText;
@@ -52,11 +56,6 @@ namespace Torrent_downloader
                     control.ForeColor = System.Drawing.SystemColors.ControlDark;
                 }
             };
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnTurn_Click(object sender, EventArgs e)
@@ -84,5 +83,75 @@ namespace Torrent_downloader
             this.Close();
             Application.Exit();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ScriptErrorsSuppressed = true;
+            webBrowser1.Navigate("http://tsearch.me/global/");
+
+            webBrowser1Pause();
+
+
+            HtmlElementCollection elmInput, elmA;
+            elmInput = webBrowser1.Document.GetElementsByTagName("input");
+            foreach (HtmlElement elmBtn in elmInput)
+            {
+                if (elmBtn.Name == "search")
+                {
+                    elmBtn.InnerText = tbSearch.Text;
+                    break;
+                }
+            }
+
+            foreach (HtmlElement elmBtn in elmInput)
+            {
+                if (elmBtn.GetAttribute("value") == "Поиск")
+                {
+                    elmBtn.InvokeMember("click");
+                    break;
+                }
+            }
+
+            webBrowser1Pause();
+
+
+            //string html = webBrowser1.Document.Body.InnerHtml;
+
+            object[] codeString = { "search", "1", new object[] { "language:", "ru"} };
+            webBrowser1.Document.InvokeScript("google.load", codeString);
+            string html = webBrowser1.DocumentText;
+            File.WriteAllText(@"D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Debug\test.html", html);
+
+
+
+            //webBrowser1.Navigate("http://tsearch.me/global/", "_self", data, "Content-Type: application/x-www-form-urlencoded");
+        }
+
+        private void webBrowser1Pause()
+        {
+            while (webBrowser1.IsBusy || webBrowser1.ReadyState != WebBrowserReadyState.Complete)
+            {
+                Application.DoEvents();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HtmlElementCollection elmInput, elmA;
+            string html = String.Empty;
+
+
+            elmA = webBrowser1.Document.GetElementsByTagName("a");
+            foreach (HtmlElement elmBtn in elmA)
+            {
+                if (elmBtn.GetAttribute("class") == "gs-title")
+                {
+                    html += elmBtn.OuterText;
+                }
+            }
+
+            File.WriteAllText(@"D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Debug\test.html", html);
+        }
+
     }
 }

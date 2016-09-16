@@ -38,6 +38,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnExpand = new System.Windows.Forms.Button();
             this.btnTurn = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,12 +154,32 @@
             this.btnTurn.UseVisualStyleBackColor = false;
             this.btnTurn.Click += new System.EventHandler(this.btnTurn_Click);
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(49, 154);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(906, 356);
+            this.webBrowser1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(880, 125);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TorrentDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(69)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(987, 205);
+            this.ClientSize = new System.Drawing.Size(987, 542);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btnTurn);
             this.Controls.Add(this.btnExpand);
             this.Controls.Add(this.btnClose);
@@ -186,6 +208,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnExpand;
         private System.Windows.Forms.Button btnTurn;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

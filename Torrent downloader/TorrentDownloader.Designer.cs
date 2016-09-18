@@ -39,8 +39,29 @@
             this.btnExpand = new System.Windows.Forms.Button();
             this.btnTurn = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tableResult = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDownload1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.btnDownload2 = new System.Windows.Forms.Button();
+            this.btnDownload3 = new System.Windows.Forms.Button();
+            this.btnDownload4 = new System.Windows.Forms.Button();
+            this.btnDownload5 = new System.Windows.Forms.Button();
+            this.btnDownload6 = new System.Windows.Forms.Button();
+            this.btnDownload7 = new System.Windows.Forms.Button();
+            this.btnDownload8 = new System.Windows.Forms.Button();
+            this.btnDownload9 = new System.Windows.Forms.Button();
+            this.btnDownload10 = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
+            this.tableResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -100,7 +121,7 @@
             this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbSearch.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.tbSearch.Location = new System.Drawing.Point(49, 76);
             this.tbSearch.Multiline = true;
@@ -117,9 +138,9 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(936, 8);
+            this.btnClose.Location = new System.Drawing.Point(923, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.Size = new System.Drawing.Size(60, 25);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -132,9 +153,9 @@
             this.btnExpand.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExpand.FlatAppearance.BorderSize = 0;
             this.btnExpand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpand.Location = new System.Drawing.Point(891, 8);
+            this.btnExpand.Location = new System.Drawing.Point(890, 0);
             this.btnExpand.Name = "btnExpand";
-            this.btnExpand.Size = new System.Drawing.Size(40, 40);
+            this.btnExpand.Size = new System.Drawing.Size(34, 25);
             this.btnExpand.TabIndex = 5;
             this.btnExpand.UseVisualStyleBackColor = false;
             this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
@@ -147,38 +168,435 @@
             this.btnTurn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTurn.FlatAppearance.BorderSize = 0;
             this.btnTurn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTurn.Location = new System.Drawing.Point(846, 8);
+            this.btnTurn.Location = new System.Drawing.Point(855, 0);
             this.btnTurn.Name = "btnTurn";
-            this.btnTurn.Size = new System.Drawing.Size(40, 40);
+            this.btnTurn.Size = new System.Drawing.Size(36, 25);
             this.btnTurn.TabIndex = 6;
             this.btnTurn.UseVisualStyleBackColor = false;
             this.btnTurn.Click += new System.EventHandler(this.btnTurn_Click);
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(49, 154);
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser1.Location = new System.Drawing.Point(49, 658);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(906, 356);
+            this.webBrowser1.Size = new System.Drawing.Size(906, 77);
             this.webBrowser1.TabIndex = 7;
+            this.webBrowser1.Visible = false;
             // 
-            // button1
+            // tableResult
             // 
-            this.button1.Location = new System.Drawing.Point(880, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tableResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableResult.ColumnCount = 2;
+            this.tableResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
+            this.tableResult.Controls.Add(this.btnDownload10, 1, 9);
+            this.tableResult.Controls.Add(this.btnDownload9, 1, 8);
+            this.tableResult.Controls.Add(this.btnDownload8, 1, 7);
+            this.tableResult.Controls.Add(this.btnDownload7, 1, 6);
+            this.tableResult.Controls.Add(this.btnDownload6, 1, 5);
+            this.tableResult.Controls.Add(this.btnDownload5, 1, 4);
+            this.tableResult.Controls.Add(this.btnDownload4, 1, 3);
+            this.tableResult.Controls.Add(this.btnDownload3, 1, 2);
+            this.tableResult.Controls.Add(this.btnDownload2, 1, 1);
+            this.tableResult.Controls.Add(this.richTextBox2, 0, 1);
+            this.tableResult.Controls.Add(this.btnDownload1, 1, 0);
+            this.tableResult.Controls.Add(this.richTextBox1, 0, 0);
+            this.tableResult.Controls.Add(this.richTextBox3, 0, 2);
+            this.tableResult.Controls.Add(this.richTextBox4, 0, 3);
+            this.tableResult.Controls.Add(this.richTextBox5, 0, 4);
+            this.tableResult.Controls.Add(this.richTextBox6, 0, 5);
+            this.tableResult.Controls.Add(this.richTextBox7, 0, 6);
+            this.tableResult.Controls.Add(this.richTextBox8, 0, 7);
+            this.tableResult.Controls.Add(this.richTextBox9, 0, 8);
+            this.tableResult.Controls.Add(this.richTextBox10, 0, 9);
+            this.tableResult.Location = new System.Drawing.Point(49, 142);
+            this.tableResult.Name = "tableResult";
+            this.tableResult.RowCount = 10;
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableResult.Size = new System.Drawing.Size(906, 480);
+            this.tableResult.TabIndex = 9;
+            this.tableResult.Visible = false;
+            // 
+            // btnDownload1
+            // 
+            this.btnDownload1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload1.FlatAppearance.BorderSize = 0;
+            this.btnDownload1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload1.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload1.Image")));
+            this.btnDownload1.Location = new System.Drawing.Point(708, 3);
+            this.btnDownload1.Name = "btnDownload1";
+            this.btnDownload1.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload1.TabIndex = 12;
+            this.btnDownload1.TabStop = false;
+            this.btnDownload1.UseVisualStyleBackColor = false;
+            this.btnDownload1.Click += new System.EventHandler(this.btnDownload1_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.MaxLength = 70;
+            this.richTextBox1.Multiline = false;
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.TabStop = false;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.WordWrap = false;
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox3.Location = new System.Drawing.Point(3, 99);
+            this.richTextBox3.MaxLength = 70;
+            this.richTextBox3.Multiline = false;
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
+            this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox3.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox3.TabIndex = 15;
+            this.richTextBox3.TabStop = false;
+            this.richTextBox3.Text = "";
+            this.richTextBox3.WordWrap = false;
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox4.Location = new System.Drawing.Point(3, 147);
+            this.richTextBox4.MaxLength = 70;
+            this.richTextBox4.Multiline = false;
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.ReadOnly = true;
+            this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox4.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox4.TabIndex = 16;
+            this.richTextBox4.TabStop = false;
+            this.richTextBox4.Text = "";
+            this.richTextBox4.WordWrap = false;
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox5.Location = new System.Drawing.Point(3, 195);
+            this.richTextBox5.MaxLength = 70;
+            this.richTextBox5.Multiline = false;
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.ReadOnly = true;
+            this.richTextBox5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox5.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox5.TabIndex = 17;
+            this.richTextBox5.TabStop = false;
+            this.richTextBox5.Text = "";
+            this.richTextBox5.WordWrap = false;
+            // 
+            // richTextBox6
+            // 
+            this.richTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox6.Location = new System.Drawing.Point(3, 243);
+            this.richTextBox6.MaxLength = 70;
+            this.richTextBox6.Multiline = false;
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.ReadOnly = true;
+            this.richTextBox6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox6.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox6.TabIndex = 18;
+            this.richTextBox6.TabStop = false;
+            this.richTextBox6.Text = "";
+            this.richTextBox6.WordWrap = false;
+            // 
+            // richTextBox7
+            // 
+            this.richTextBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox7.Location = new System.Drawing.Point(3, 291);
+            this.richTextBox7.MaxLength = 70;
+            this.richTextBox7.Multiline = false;
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.ReadOnly = true;
+            this.richTextBox7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox7.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox7.TabIndex = 19;
+            this.richTextBox7.TabStop = false;
+            this.richTextBox7.Text = "";
+            this.richTextBox7.WordWrap = false;
+            // 
+            // richTextBox8
+            // 
+            this.richTextBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox8.Location = new System.Drawing.Point(3, 339);
+            this.richTextBox8.MaxLength = 70;
+            this.richTextBox8.Multiline = false;
+            this.richTextBox8.Name = "richTextBox8";
+            this.richTextBox8.ReadOnly = true;
+            this.richTextBox8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox8.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox8.TabIndex = 20;
+            this.richTextBox8.TabStop = false;
+            this.richTextBox8.Text = "";
+            this.richTextBox8.WordWrap = false;
+            // 
+            // richTextBox9
+            // 
+            this.richTextBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox9.Location = new System.Drawing.Point(3, 387);
+            this.richTextBox9.MaxLength = 70;
+            this.richTextBox9.Multiline = false;
+            this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.ReadOnly = true;
+            this.richTextBox9.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox9.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox9.TabIndex = 21;
+            this.richTextBox9.TabStop = false;
+            this.richTextBox9.Text = "";
+            this.richTextBox9.WordWrap = false;
+            // 
+            // richTextBox10
+            // 
+            this.richTextBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox10.Location = new System.Drawing.Point(3, 435);
+            this.richTextBox10.MaxLength = 70;
+            this.richTextBox10.Multiline = false;
+            this.richTextBox10.Name = "richTextBox10";
+            this.richTextBox10.ReadOnly = true;
+            this.richTextBox10.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox10.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox10.TabIndex = 22;
+            this.richTextBox10.TabStop = false;
+            this.richTextBox10.Text = "";
+            this.richTextBox10.WordWrap = false;
+            // 
+            // btnDownload2
+            // 
+            this.btnDownload2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload2.FlatAppearance.BorderSize = 0;
+            this.btnDownload2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload2.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload2.Image")));
+            this.btnDownload2.Location = new System.Drawing.Point(708, 51);
+            this.btnDownload2.Name = "btnDownload2";
+            this.btnDownload2.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload2.TabIndex = 23;
+            this.btnDownload2.TabStop = false;
+            this.btnDownload2.UseVisualStyleBackColor = false;
+            this.btnDownload2.Click += new System.EventHandler(this.btnDownload2_Click);
+            // 
+            // btnDownload3
+            // 
+            this.btnDownload3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload3.FlatAppearance.BorderSize = 0;
+            this.btnDownload3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload3.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload3.Image")));
+            this.btnDownload3.Location = new System.Drawing.Point(708, 99);
+            this.btnDownload3.Name = "btnDownload3";
+            this.btnDownload3.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload3.TabIndex = 24;
+            this.btnDownload3.TabStop = false;
+            this.btnDownload3.UseVisualStyleBackColor = false;
+            this.btnDownload3.Click += new System.EventHandler(this.btnDownload3_Click);
+            // 
+            // btnDownload4
+            // 
+            this.btnDownload4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload4.FlatAppearance.BorderSize = 0;
+            this.btnDownload4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload4.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload4.Image")));
+            this.btnDownload4.Location = new System.Drawing.Point(708, 147);
+            this.btnDownload4.Name = "btnDownload4";
+            this.btnDownload4.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload4.TabIndex = 25;
+            this.btnDownload4.TabStop = false;
+            this.btnDownload4.UseVisualStyleBackColor = false;
+            this.btnDownload4.Click += new System.EventHandler(this.btnDownload4_Click);
+            // 
+            // btnDownload5
+            // 
+            this.btnDownload5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload5.FlatAppearance.BorderSize = 0;
+            this.btnDownload5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload5.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload5.Image")));
+            this.btnDownload5.Location = new System.Drawing.Point(708, 195);
+            this.btnDownload5.Name = "btnDownload5";
+            this.btnDownload5.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload5.TabIndex = 26;
+            this.btnDownload5.TabStop = false;
+            this.btnDownload5.UseVisualStyleBackColor = false;
+            this.btnDownload5.Click += new System.EventHandler(this.btnDownload5_Click);
+            // 
+            // btnDownload6
+            // 
+            this.btnDownload6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload6.FlatAppearance.BorderSize = 0;
+            this.btnDownload6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload6.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload6.Image")));
+            this.btnDownload6.Location = new System.Drawing.Point(708, 243);
+            this.btnDownload6.Name = "btnDownload6";
+            this.btnDownload6.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload6.TabIndex = 27;
+            this.btnDownload6.TabStop = false;
+            this.btnDownload6.UseVisualStyleBackColor = false;
+            this.btnDownload6.Click += new System.EventHandler(this.btnDownload6_Click);
+            // 
+            // btnDownload7
+            // 
+            this.btnDownload7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload7.FlatAppearance.BorderSize = 0;
+            this.btnDownload7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload7.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload7.Image")));
+            this.btnDownload7.Location = new System.Drawing.Point(708, 291);
+            this.btnDownload7.Name = "btnDownload7";
+            this.btnDownload7.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload7.TabIndex = 28;
+            this.btnDownload7.TabStop = false;
+            this.btnDownload7.UseVisualStyleBackColor = false;
+            this.btnDownload7.Click += new System.EventHandler(this.btnDownload7_Click);
+            // 
+            // btnDownload8
+            // 
+            this.btnDownload8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload8.FlatAppearance.BorderSize = 0;
+            this.btnDownload8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload8.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload8.Image")));
+            this.btnDownload8.Location = new System.Drawing.Point(708, 339);
+            this.btnDownload8.Name = "btnDownload8";
+            this.btnDownload8.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload8.TabIndex = 29;
+            this.btnDownload8.TabStop = false;
+            this.btnDownload8.UseVisualStyleBackColor = false;
+            this.btnDownload8.Click += new System.EventHandler(this.btnDownload8_Click);
+            // 
+            // btnDownload9
+            // 
+            this.btnDownload9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload9.FlatAppearance.BorderSize = 0;
+            this.btnDownload9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload9.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload9.Image")));
+            this.btnDownload9.Location = new System.Drawing.Point(708, 387);
+            this.btnDownload9.Name = "btnDownload9";
+            this.btnDownload9.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload9.TabIndex = 30;
+            this.btnDownload9.TabStop = false;
+            this.btnDownload9.UseVisualStyleBackColor = false;
+            this.btnDownload9.Click += new System.EventHandler(this.btnDownload9_Click);
+            // 
+            // btnDownload10
+            // 
+            this.btnDownload10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDownload10.FlatAppearance.BorderSize = 0;
+            this.btnDownload10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDownload10.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload10.Image")));
+            this.btnDownload10.Location = new System.Drawing.Point(708, 435);
+            this.btnDownload10.Name = "btnDownload10";
+            this.btnDownload10.Size = new System.Drawing.Size(195, 42);
+            this.btnDownload10.TabIndex = 31;
+            this.btnDownload10.TabStop = false;
+            this.btnDownload10.UseVisualStyleBackColor = false;
+            this.btnDownload10.Click += new System.EventHandler(this.btnDownload10_Click);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox2.Location = new System.Drawing.Point(3, 51);
+            this.richTextBox2.MaxLength = 70;
+            this.richTextBox2.Multiline = false;
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox2.Size = new System.Drawing.Size(699, 42);
+            this.richTextBox2.TabIndex = 14;
+            this.richTextBox2.TabStop = false;
+            this.richTextBox2.Text = "";
+            this.richTextBox2.WordWrap = false;
             // 
             // TorrentDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(69)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(987, 542);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(987, 140);
+            this.Controls.Add(this.tableResult);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btnTurn);
             this.Controls.Add(this.btnExpand);
@@ -192,6 +610,7 @@
             this.Text = "Torrent Downloader";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tableResult.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +628,27 @@
         private System.Windows.Forms.Button btnExpand;
         private System.Windows.Forms.Button btnTurn;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableResult;
+        private System.Windows.Forms.Button btnDownload1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnDownload10;
+        private System.Windows.Forms.Button btnDownload9;
+        private System.Windows.Forms.Button btnDownload8;
+        private System.Windows.Forms.Button btnDownload7;
+        private System.Windows.Forms.Button btnDownload6;
+        private System.Windows.Forms.Button btnDownload5;
+        private System.Windows.Forms.Button btnDownload4;
+        private System.Windows.Forms.Button btnDownload3;
+        private System.Windows.Forms.Button btnDownload2;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox richTextBox7;
+        private System.Windows.Forms.RichTextBox richTextBox8;
+        private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.RichTextBox richTextBox10;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
 

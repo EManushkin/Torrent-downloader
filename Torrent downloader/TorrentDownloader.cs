@@ -30,35 +30,67 @@ namespace Torrent_downloader
         {
             InitializeComponent();
 
-            this.SetPlaceHolder(tbSearch, "  Search for Apps");
-            this.Show();
-            this.Enabled = false;
+            //Config in this path
+            //C:\Users\[User]\AppData\Local\[ProgramName]\[ExeName]_Url_[some_hash]\[Version]\user.config
+            if (Properties.Settings.Default.FirstRun == true)
+            {
+                this.SetPlaceHolder(tbSearch, "  KEY");
+                this.Show();
+                this.Enabled = false;
+                Thread.Sleep(1000);
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
 
-            Thread.Sleep(1000);
+                Properties.Settings.Default.FirstRun = false;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                this.SetPlaceHolder(tbSearch, "  Search for Apps");
+                this.Show();
+            }
 
-            var formSignUp = new SignUp();
-            formSignUp.Show();
-            formSignUp.Activate();
+            //this.SetPlaceHolder(tbSearch, "  Search for Apps");
+            //this.Show();
+            //this.Enabled = false;
+            //Thread.Sleep(1000);
+            //var formSignUp = new SignUp();
+            //formSignUp.Show();
+            //formSignUp.Activate();
 
         }
 
         private void ShowResults()
         {
-            tableResult.Visible = true;
-            this.Size = new Size(987, 650);
-            this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
-                                      (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+            try
+            {
+                tableNothingResult.Visible = false;
 
-            richTextBox1.Text = result[0].name;
-            richTextBox2.Text = result[1].name;
-            richTextBox3.Text = result[2].name;
-            richTextBox4.Text = result[3].name;
-            richTextBox5.Text = result[4].name;
-            richTextBox6.Text = result[5].name;
-            richTextBox7.Text = result[6].name;
-            richTextBox8.Text = result[7].name;
-            richTextBox9.Text = result[8].name;
-            richTextBox10.Text = result[9].name;
+                richTextBox1.Text = result[0].name;
+                richTextBox2.Text = result[1].name;
+                richTextBox3.Text = result[2].name;
+                richTextBox4.Text = result[3].name;
+                richTextBox5.Text = result[4].name;
+                richTextBox6.Text = result[5].name;
+                richTextBox7.Text = result[6].name;
+                richTextBox8.Text = result[7].name;
+                richTextBox9.Text = result[8].name;
+                richTextBox10.Text = result[9].name;
+
+                tableResult.Visible = true;
+                this.Size = new Size(987, 650);
+                this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
+                                          (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+            }
+            catch (Exception)
+            {
+                tableResult.Visible = false;
+                tableNothingResult.Visible = true;
+            }
+
+
+
 
         }
 

@@ -63,8 +63,8 @@
             this.tableNothingResult = new System.Windows.Forms.TableLayoutPanel();
             this.richTextBoxNothing = new System.Windows.Forms.RichTextBox();
             this.tableFirstRun = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBoxFirstRun = new System.Windows.Forms.RichTextBox();
             this.btnFirstRun = new System.Windows.Forms.Button();
+            this.richTextBoxFirstRun = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.tableResult.SuspendLayout();
             this.tableNothingResult.SuspendLayout();
@@ -184,14 +184,11 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(49, 658);
+            this.webBrowser1.Location = new System.Drawing.Point(52, 628);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(906, 77);
-            this.webBrowser1.TabIndex = 7;
-            this.webBrowser1.Visible = false;
+            this.webBrowser1.Size = new System.Drawing.Size(909, 576);
+            this.webBrowser1.TabIndex = 1;
             // 
             // tableResult
             // 
@@ -649,6 +646,22 @@
             this.tableFirstRun.TabIndex = 11;
             this.tableFirstRun.Visible = false;
             // 
+            // btnFirstRun
+            // 
+            this.btnFirstRun.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFirstRun.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFirstRun.FlatAppearance.BorderSize = 0;
+            this.btnFirstRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirstRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnFirstRun.Image = ((System.Drawing.Image)(resources.GetObject("btnFirstRun.Image")));
+            this.btnFirstRun.Location = new System.Drawing.Point(708, 3);
+            this.btnFirstRun.Name = "btnFirstRun";
+            this.btnFirstRun.Size = new System.Drawing.Size(195, 42);
+            this.btnFirstRun.TabIndex = 24;
+            this.btnFirstRun.TabStop = false;
+            this.btnFirstRun.UseVisualStyleBackColor = false;
+            // 
             // richTextBoxFirstRun
             // 
             this.richTextBoxFirstRun.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -668,28 +681,12 @@
             this.richTextBoxFirstRun.Text = "";
             this.richTextBoxFirstRun.WordWrap = false;
             // 
-            // btnFirstRun
-            // 
-            this.btnFirstRun.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFirstRun.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFirstRun.FlatAppearance.BorderSize = 0;
-            this.btnFirstRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirstRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnFirstRun.Image = ((System.Drawing.Image)(resources.GetObject("btnFirstRun.Image")));
-            this.btnFirstRun.Location = new System.Drawing.Point(708, 3);
-            this.btnFirstRun.Name = "btnFirstRun";
-            this.btnFirstRun.Size = new System.Drawing.Size(195, 42);
-            this.btnFirstRun.TabIndex = 24;
-            this.btnFirstRun.TabStop = false;
-            this.btnFirstRun.UseVisualStyleBackColor = false;
-            // 
             // TorrentDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(69)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(987, 658);
+            this.ClientSize = new System.Drawing.Size(987, 1062);
             this.Controls.Add(this.tableFirstRun);
             this.Controls.Add(this.tableNothingResult);
             this.Controls.Add(this.tableResult);

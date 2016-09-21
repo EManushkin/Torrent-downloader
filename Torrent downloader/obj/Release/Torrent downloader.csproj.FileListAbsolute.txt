@@ -8,3 +8,4 @@ D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_d
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent downloader.csproj.GenerateResource.Cache
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.exe
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.pdb
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent downloader.csprojResolveAssemblyReference.cache

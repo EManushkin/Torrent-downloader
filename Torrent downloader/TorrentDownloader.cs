@@ -29,7 +29,15 @@ namespace Torrent_downloader
 
         public TorrentDownloader()
         {
+            //The registry key is \HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\ - the keyname is 1400 and the value to disable it is 3, and to enable it is 0.
+            RegistryKey enableJS = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3", true);
+            if ((int)enableJS.GetValue("1400") == 3)
+            {
+                enableJS.SetValue("1400", 0);
+            }
+
             InitializeComponent();
+            
             this.Size = new Size(987, 140);
 
             //Config in this path

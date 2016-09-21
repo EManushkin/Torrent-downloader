@@ -41,9 +41,13 @@ namespace Torrent_downloader
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            this.Close();
-            var formValidateAccount = new ValidateAccount();
-            formValidateAccount.Show();
+            if (tbEmail.Text != String.Empty && tbEmail.Text != "   Email" &&
+                tbPassword.Text != String.Empty && tbPassword.Text != "   Password (+6 Characters)")
+            {
+                this.Close();
+                var formValidateAccount = new ValidateAccount();
+                formValidateAccount.Show();
+            }
         }
     }
 }

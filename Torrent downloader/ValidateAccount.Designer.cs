@@ -38,7 +38,7 @@
             this.cbMonth = new System.Windows.Forms.ComboBox();
             this.cbYear = new System.Windows.Forms.ComboBox();
             this.mtbCardNumber = new System.Windows.Forms.MaskedTextBox();
-            this.mtbCCV2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCVV2 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // labelValidateAccount
@@ -170,16 +170,16 @@
             this.mtbCardNumber.TabStop = false;
             this.mtbCardNumber.Enter += new System.EventHandler(this.mtbCardNumber_Enter);
             // 
-            // mtbCCV2
+            // mtbCVV2
             // 
-            this.mtbCCV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mtbCCV2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.mtbCCV2.Location = new System.Drawing.Point(15, 206);
-            this.mtbCCV2.Name = "mtbCCV2";
-            this.mtbCCV2.Size = new System.Drawing.Size(58, 26);
-            this.mtbCCV2.TabIndex = 24;
-            this.mtbCCV2.TabStop = false;
-            this.mtbCCV2.Enter += new System.EventHandler(this.mtbCCV2_Enter);
+            this.mtbCVV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mtbCVV2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.mtbCVV2.Location = new System.Drawing.Point(15, 206);
+            this.mtbCVV2.Name = "mtbCVV2";
+            this.mtbCVV2.Size = new System.Drawing.Size(58, 26);
+            this.mtbCVV2.TabIndex = 24;
+            this.mtbCVV2.TabStop = false;
+            this.mtbCVV2.Enter += new System.EventHandler(this.mtbCCV2_Enter);
             // 
             // ValidateAccount
             // 
@@ -187,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(444, 329);
-            this.Controls.Add(this.mtbCCV2);
+            this.Controls.Add(this.mtbCVV2);
             this.Controls.Add(this.mtbCardNumber);
             this.Controls.Add(this.cbYear);
             this.Controls.Add(this.cbMonth);
@@ -217,6 +217,6 @@
         private System.Windows.Forms.ComboBox cbMonth;
         private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.MaskedTextBox mtbCardNumber;
-        private System.Windows.Forms.MaskedTextBox mtbCCV2;
+        private System.Windows.Forms.MaskedTextBox mtbCVV2;
     }
 }

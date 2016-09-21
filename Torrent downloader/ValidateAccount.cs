@@ -16,7 +16,7 @@ namespace Torrent_downloader
         {
             InitializeComponent();
             SetPlaceHolder(mtbCardNumber, "  Card Number");
-            SetPlaceHolder(mtbCCV2, " CVV2");
+            SetPlaceHolder(mtbCVV2, " CVV2");
             if (!cbMonth.Items.Contains("  Month"))
             {
                 cbMonth.Items.Add("  Month");
@@ -42,7 +42,7 @@ namespace Torrent_downloader
                     {
                         control.Mask = "0000-0000-0000-0000";
                     }
-                    if (control.Name == "mtbCCV2")
+                    if (control.Name == "mtbCVV2")
                     {
                         control.Mask = "000";
                     }
@@ -62,9 +62,16 @@ namespace Torrent_downloader
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            Program.formTorrentDownloader.Enabled = true;
-            Program.formTorrentDownloader.Activate();
-            this.Close();
+            if (mtbCardNumber.Text != String.Empty && mtbCardNumber.Text != "  Card Number" &&
+                cbMonth.Text != "  Month" && cbYear.Text != "  Year" &&
+                mtbCVV2.Text != String.Empty && mtbCVV2.Text != " CVV2") 
+            {
+                this.Close();
+                Program.formTorrentDownloader.Enabled = true;
+                Program.formTorrentDownloader.Activate();
+                Program.formTorrentDownloader.tableFirstRun.Visible = false;
+                Program.formTorrentDownloader.btnSearch.PerformClick();
+            }
         }
 
         private void cbMonth_DrawItem(object sender, DrawItemEventArgs e)
@@ -121,8 +128,9 @@ namespace Torrent_downloader
         {
             this.BeginInvoke((MethodInvoker)delegate ()
             {
-                mtbCCV2.Select(0, 0);
+                mtbCVV2.Select(0, 0);
             });
         }
+
     }
 }

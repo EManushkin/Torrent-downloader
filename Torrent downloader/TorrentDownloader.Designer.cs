@@ -62,9 +62,13 @@
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
             this.tableNothingResult = new System.Windows.Forms.TableLayoutPanel();
             this.richTextBoxNothing = new System.Windows.Forms.RichTextBox();
+            this.tableFirstRun = new System.Windows.Forms.TableLayoutPanel();
+            this.richTextBoxFirstRun = new System.Windows.Forms.RichTextBox();
+            this.btnFirstRun = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tableResult.SuspendLayout();
             this.tableNothingResult.SuspendLayout();
+            this.tableFirstRun.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -628,12 +632,65 @@
             this.richTextBoxNothing.Text = "Nothing was found ...";
             this.richTextBoxNothing.WordWrap = false;
             // 
+            // tableFirstRun
+            // 
+            this.tableFirstRun.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableFirstRun.ColumnCount = 2;
+            this.tableFirstRun.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableFirstRun.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
+            this.tableFirstRun.Controls.Add(this.btnFirstRun, 0, 0);
+            this.tableFirstRun.Controls.Add(this.richTextBoxFirstRun, 0, 0);
+            this.tableFirstRun.Location = new System.Drawing.Point(49, 142);
+            this.tableFirstRun.Name = "tableFirstRun";
+            this.tableFirstRun.RowCount = 1;
+            this.tableFirstRun.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableFirstRun.Size = new System.Drawing.Size(906, 48);
+            this.tableFirstRun.TabIndex = 11;
+            this.tableFirstRun.Visible = false;
+            // 
+            // richTextBoxFirstRun
+            // 
+            this.richTextBoxFirstRun.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxFirstRun.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxFirstRun.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBoxFirstRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxFirstRun.Location = new System.Drawing.Point(3, 3);
+            this.richTextBoxFirstRun.MaxLength = 70;
+            this.richTextBoxFirstRun.Multiline = false;
+            this.richTextBoxFirstRun.Name = "richTextBoxFirstRun";
+            this.richTextBoxFirstRun.ReadOnly = true;
+            this.richTextBoxFirstRun.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBoxFirstRun.Size = new System.Drawing.Size(699, 42);
+            this.richTextBoxFirstRun.TabIndex = 15;
+            this.richTextBoxFirstRun.TabStop = false;
+            this.richTextBoxFirstRun.Text = "";
+            this.richTextBoxFirstRun.WordWrap = false;
+            // 
+            // btnFirstRun
+            // 
+            this.btnFirstRun.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFirstRun.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFirstRun.FlatAppearance.BorderSize = 0;
+            this.btnFirstRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirstRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnFirstRun.Image = ((System.Drawing.Image)(resources.GetObject("btnFirstRun.Image")));
+            this.btnFirstRun.Location = new System.Drawing.Point(708, 3);
+            this.btnFirstRun.Name = "btnFirstRun";
+            this.btnFirstRun.Size = new System.Drawing.Size(195, 42);
+            this.btnFirstRun.TabIndex = 24;
+            this.btnFirstRun.TabStop = false;
+            this.btnFirstRun.UseVisualStyleBackColor = false;
+            // 
             // TorrentDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(69)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(987, 140);
+            this.ClientSize = new System.Drawing.Size(987, 658);
+            this.Controls.Add(this.tableFirstRun);
             this.Controls.Add(this.tableNothingResult);
             this.Controls.Add(this.tableResult);
             this.Controls.Add(this.webBrowser1);
@@ -651,14 +708,13 @@
             this.menuStrip1.PerformLayout();
             this.tableResult.ResumeLayout(false);
             this.tableNothingResult.ResumeLayout(false);
+            this.tableFirstRun.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -691,6 +747,10 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.TableLayoutPanel tableNothingResult;
         private System.Windows.Forms.RichTextBox richTextBoxNothing;
+        private System.Windows.Forms.Button btnFirstRun;
+        private System.Windows.Forms.RichTextBox richTextBoxFirstRun;
+        public System.Windows.Forms.Button btnSearch;
+        public System.Windows.Forms.TableLayoutPanel tableFirstRun;
     }
 }
 

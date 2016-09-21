@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.Win32;
 
 namespace Torrent_downloader
 {
@@ -29,14 +30,40 @@ namespace Torrent_downloader
         public TorrentDownloader()
         {
             InitializeComponent();
+            this.Size = new Size(987, 140);
 
             //Config in this path
             //C:\Users\[User]\AppData\Local\[ProgramName]\[ExeName]_Url_[some_hash]\[Version]\user.config
             if (Properties.Settings.Default.FirstRun == true)
             {
-                this.SetPlaceHolder(tbSearch, "  KEY");
                 this.Show();
                 this.Enabled = false;
+
+                string name_of_installer;
+
+                RegistryKey readKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Torrent Downloader");
+                if (readKey != null)
+                {
+                    name_of_installer = (string)readKey.GetValue("OriginalDatabase");
+                    name_of_installer = name_of_installer.Substring(name_of_installer.LastIndexOf("\\") + 1, name_of_installer.IndexOf(".msi") - name_of_installer.LastIndexOf("\\") - 1);
+
+                    tbSearch.ForeColor = System.Drawing.SystemColors.ControlText;
+                    tbSearch.Text = name_of_installer;
+                    this.Size = new Size(987, 200);
+                    this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
+                          (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+
+                    this.richTextBoxFirstRun.Text = name_of_installer;
+                    this.tableFirstRun.Visible = true;
+
+                }
+                else
+                {
+                    name_of_installer = "  Search for Apps";
+                    this.SetPlaceHolder(tbSearch, name_of_installer);
+                }
+
+
                 Thread.Sleep(1000);
                 var formSignUp = new SignUp();
                 formSignUp.Show();
@@ -50,14 +77,6 @@ namespace Torrent_downloader
                 this.SetPlaceHolder(tbSearch, "  Search for Apps");
                 this.Show();
             }
-
-            //this.SetPlaceHolder(tbSearch, "  Search for Apps");
-            //this.Show();
-            //this.Enabled = false;
-            //Thread.Sleep(1000);
-            //var formSignUp = new SignUp();
-            //formSignUp.Show();
-            //formSignUp.Activate();
 
         }
 
@@ -87,8 +106,10 @@ namespace Torrent_downloader
             {
                 tableResult.Visible = false;
                 tableNothingResult.Visible = true;
+                this.Size = new Size(987, 200);
+                this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
+                                          (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             }
-
 
 
 

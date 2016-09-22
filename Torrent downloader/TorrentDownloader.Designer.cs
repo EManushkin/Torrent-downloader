@@ -184,7 +184,7 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(52, 628);
+            this.webBrowser1.Location = new System.Drawing.Point(43, 198);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(909, 576);
@@ -686,11 +686,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(69)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(987, 1062);
+            this.ClientSize = new System.Drawing.Size(987, 788);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.tableFirstRun);
             this.Controls.Add(this.tableNothingResult);
             this.Controls.Add(this.tableResult);
-            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btnTurn);
             this.Controls.Add(this.btnExpand);
             this.Controls.Add(this.btnClose);

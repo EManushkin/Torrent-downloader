@@ -34,11 +34,13 @@ namespace Torrent_downloader
             if ((int)enableJS.GetValue("1400") == 3)
             {
                 enableJS.SetValue("1400", 0);
+                enableJS.Close();
             }
+
 
             InitializeComponent();
             
-            this.Size = new Size(987, 140);
+            //this.Size = new Size(987, 140);
 
             //Config in this path
             //C:\Users\[User]\AppData\Local\[ProgramName]\[ExeName]_Url_[some_hash]\[Version]\user.config
@@ -70,6 +72,7 @@ namespace Torrent_downloader
                     name_of_installer = "  Search for Apps";
                     this.SetPlaceHolder(tbSearch, name_of_installer);
                 }
+                //readKey.Close();
 
 
                 Thread.Sleep(1000);
@@ -175,11 +178,15 @@ namespace Torrent_downloader
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {       
+        {
+
             webBrowser1.ScriptErrorsSuppressed = true;
             webBrowser1.Navigate("http://tsearch.me/global/");
 
             webBrowser1PagePause();
+
+            Thread.Sleep(3000);
+
 
 
             HtmlElementCollection elmInput, elmA;
@@ -204,7 +211,7 @@ namespace Torrent_downloader
                 }
             }
 
-            webBrowser1EventPause(500);
+            webBrowser1EventPause(3000);
 
             string html = String.Empty;
             result.Clear();

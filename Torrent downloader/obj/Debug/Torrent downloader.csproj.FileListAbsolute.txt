@@ -8,3 +8,13 @@ D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Debug\Torrent_dow
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Debug\Torrent downloader.csproj.GenerateResource.Cache
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Debug\Torrent downloader.exe
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Debug\Torrent downloader.pdb
+D:\Mann\Torrent Downloader\Torrent downloader\bin\Debug\Torrent Downloader.exe.config
+D:\Mann\Torrent Downloader\Torrent downloader\bin\Debug\Torrent Downloader.exe
+D:\Mann\Torrent Downloader\Torrent downloader\bin\Debug\Torrent Downloader.pdb
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent_downloader.SignUp.resources
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent_downloader.TorrentDownloader.resources
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent_downloader.Properties.Resources.resources
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent_downloader.ValidateAccount.resources
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent downloader.csproj.GenerateResource.Cache
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent Downloader.exe
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent Downloader.pdb

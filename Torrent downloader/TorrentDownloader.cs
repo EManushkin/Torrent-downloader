@@ -180,56 +180,56 @@ namespace Torrent_downloader
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            webBrowser1.ScriptErrorsSuppressed = true;
+            //webBrowser1.ScriptErrorsSuppressed = true;
             webBrowser1.Navigate("http://tsearch.me/global/");
 
-            webBrowser1PagePause();
+            //webBrowser1PagePause();
 
-            Thread.Sleep(3000);
+            //Thread.Sleep(3000);
 
 
 
-            HtmlElementCollection elmInput, elmA;
-            elmInput = webBrowser1.Document.GetElementsByTagName("input");
-            foreach (HtmlElement elmBtn in elmInput)
-            {
-                if (elmBtn.Name == "search")
-                {
-                    elmBtn.InnerText = tbSearch.Text;
-                    break;
-                }
-            }
+            //HtmlElementCollection elmInput, elmA;
+            //elmInput = webBrowser1.Document.GetElementsByTagName("input");
+            //foreach (HtmlElement elmBtn in elmInput)
+            //{
+            //    if (elmBtn.Name == "search")
+            //    {
+            //        elmBtn.InnerText = tbSearch.Text;
+            //        break;
+            //    }
+            //}
 
-            webBrowser1PagePause();
+            //webBrowser1PagePause();
 
-            foreach (HtmlElement elmBtn in elmInput)
-            {
-                if (elmBtn.GetAttribute("value") == "Поиск")
-                {
-                    elmBtn.InvokeMember("click");
-                    break;
-                }
-            }
+            //foreach (HtmlElement elmBtn in elmInput)
+            //{
+            //    if (elmBtn.GetAttribute("value") == "Поиск")
+            //    {
+            //        elmBtn.InvokeMember("click");
+            //        break;
+            //    }
+            //}
 
-            webBrowser1EventPause(3000);
+            //webBrowser1EventPause(3000);
 
-            string html = String.Empty;
-            result.Clear();
-            elmA = webBrowser1.Document.GetElementsByTagName("a");
-            foreach (HtmlElement elmBtn in elmA)
-            {
-                if (elmBtn.GetAttribute("classname") == "gs-title" && elmBtn.InnerText != null)
-                {
-                    one_result.name = elmBtn.InnerText;
-                    one_result.link = elmBtn.GetAttribute("href");
-                    if (!result.Contains(one_result))
-                    {
-                        result.Add(one_result);
-                    }
-                }
-            }
+            //string html = String.Empty;
+            //result.Clear();
+            //elmA = webBrowser1.Document.GetElementsByTagName("a");
+            //foreach (HtmlElement elmBtn in elmA)
+            //{
+            //    if (elmBtn.GetAttribute("classname") == "gs-title" && elmBtn.InnerText != null)
+            //    {
+            //        one_result.name = elmBtn.InnerText;
+            //        one_result.link = elmBtn.GetAttribute("href");
+            //        if (!result.Contains(one_result))
+            //        {
+            //            result.Add(one_result);
+            //        }
+            //    }
+            //}
             
-            ShowResults();
+            //ShowResults();
         }
 
         private void webBrowser1PagePause()

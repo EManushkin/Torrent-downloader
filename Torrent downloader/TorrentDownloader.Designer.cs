@@ -82,7 +82,6 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 49);
             this.btnSearch.TabIndex = 0;
-            this.btnSearch.TabStop = false;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -143,12 +142,14 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(150)))), ((int)(((byte)(23)))));
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Location = new System.Drawing.Point(923, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(60, 25);
             this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -164,6 +165,7 @@
             this.btnExpand.Name = "btnExpand";
             this.btnExpand.Size = new System.Drawing.Size(34, 25);
             this.btnExpand.TabIndex = 5;
+            this.btnExpand.TabStop = false;
             this.btnExpand.UseVisualStyleBackColor = false;
             this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
             // 
@@ -179,16 +181,18 @@
             this.btnTurn.Name = "btnTurn";
             this.btnTurn.Size = new System.Drawing.Size(36, 25);
             this.btnTurn.TabIndex = 6;
+            this.btnTurn.TabStop = false;
             this.btnTurn.UseVisualStyleBackColor = false;
             this.btnTurn.Click += new System.EventHandler(this.btnTurn_Click);
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(43, 198);
+            this.webBrowser1.Location = new System.Drawing.Point(49, 630);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(909, 576);
+            this.webBrowser1.Size = new System.Drawing.Size(364, 146);
             this.webBrowser1.TabIndex = 1;
+            this.webBrowser1.Visible = false;
             // 
             // tableResult
             // 
@@ -683,11 +687,11 @@
             // 
             // TorrentDownloader
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(69)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(987, 788);
-            this.Controls.Add(this.webBrowser1);
+            this.ClientSize = new System.Drawing.Size(987, 673);
             this.Controls.Add(this.tableFirstRun);
             this.Controls.Add(this.tableNothingResult);
             this.Controls.Add(this.tableResult);
@@ -697,6 +701,7 @@
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.webBrowser1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TorrentDownloader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

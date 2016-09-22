@@ -11,6 +11,8 @@ using System.Windows;
 using System.Windows.Forms;
 using System.IO;
 using Microsoft.Win32;
+using System.Net;
+using System.Text.RegularExpressions;
 
 namespace Torrent_downloader
 {
@@ -30,17 +32,15 @@ namespace Torrent_downloader
         public TorrentDownloader()
         {
             //The registry key is \HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\ - the keyname is 1400 and the value to disable it is 3, and to enable it is 0.
-            RegistryKey enableJS = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3", true);
-            if ((int)enableJS.GetValue("1400") == 3)
-            {
-                enableJS.SetValue("1400", 0);
-                enableJS.Close();
-            }
-
+            //RegistryKey enableJS = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3", true);
+            //if ((int)enableJS.GetValue("1400") == 3)
+            //{
+            //    enableJS.SetValue("1400", 0);
+            //    enableJS.Close();
+            //}
 
             InitializeComponent();
-            
-            //this.Size = new Size(987, 140);
+            this.Size = new Size(987, 140);
 
             //Config in this path
             //C:\Users\[User]\AppData\Local\[ProgramName]\[ExeName]_Url_[some_hash]\[Version]\user.config
@@ -179,16 +179,37 @@ namespace Torrent_downloader
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            string  url = "http://www.torrentdownloads.me/search/?search=" + tbSearch.Text.Replace(" ", "+");
+
+            WebClient client = new WebClient();
+            client.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36");
+            string page = client.DownloadString(url);
+
+            MatchCollection tags_results = Regex.Matches(page, @"(<a href=""/torrent.*?>)", RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Multiline);
+
+            result.Clear();
+
+            foreach (var tag in tags_results)
+            {
+                one_result.name = tag.ToString().Substring(tag.ToString().IndexOf(": ") + 2, tag.ToString().IndexOf("\">") - tag.ToString().IndexOf(": ") - 2);
+                one_result.link = "http://www.torrentdownloads.me" + tag.ToString().Substring(tag.ToString().IndexOf("/"), tag.ToString().IndexOf("\" title") - tag.ToString().IndexOf("/"));
+
+                if (!result.Contains(one_result))
+                {
+                    result.Add(one_result);
+                }
+            }
+
+            ShowResults();
+
+
+
+
 
             //webBrowser1.ScriptErrorsSuppressed = true;
-            webBrowser1.Navigate("http://tsearch.me/global/");
-
+            //webBrowser1.Navigate("http://tsearch.me/global/");
             //webBrowser1PagePause();
-
             //Thread.Sleep(3000);
-
-
-
             //HtmlElementCollection elmInput, elmA;
             //elmInput = webBrowser1.Document.GetElementsByTagName("input");
             //foreach (HtmlElement elmBtn in elmInput)
@@ -199,9 +220,7 @@ namespace Torrent_downloader
             //        break;
             //    }
             //}
-
             //webBrowser1PagePause();
-
             //foreach (HtmlElement elmBtn in elmInput)
             //{
             //    if (elmBtn.GetAttribute("value") == "Поиск")
@@ -210,9 +229,7 @@ namespace Torrent_downloader
             //        break;
             //    }
             //}
-
             //webBrowser1EventPause(3000);
-
             //string html = String.Empty;
             //result.Clear();
             //elmA = webBrowser1.Document.GetElementsByTagName("a");
@@ -228,7 +245,6 @@ namespace Torrent_downloader
             //        }
             //    }
             //}
-            
             //ShowResults();
         }
 

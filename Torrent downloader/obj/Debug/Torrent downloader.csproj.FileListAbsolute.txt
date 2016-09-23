@@ -19,3 +19,4 @@ D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent downloader.cspro
 D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent Downloader.exe
 D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent Downloader.pdb
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Debug\Torrent downloader.csprojResolveAssemblyReference.cache
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent downloader.csprojResolveAssemblyReference.cache

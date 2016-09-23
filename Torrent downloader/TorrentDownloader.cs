@@ -182,6 +182,7 @@ namespace Torrent_downloader
             string  url = "http://www.torrentdownloads.me/search/?search=" + tbSearch.Text.Replace(" ", "+");
 
             WebClient client = new WebClient();
+            client.Encoding = System.Text.Encoding.UTF8;
             client.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36");
             string page = client.DownloadString(url);
 

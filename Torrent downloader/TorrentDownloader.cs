@@ -72,8 +72,6 @@ namespace Torrent_downloader
                     name_of_installer = "  Search for Apps";
                     this.SetPlaceHolder(tbSearch, name_of_installer);
                 }
-                //readKey.Close();
-
 
                 Thread.Sleep(1000);
                 var formSignUp = new SignUp();
@@ -202,70 +200,6 @@ namespace Torrent_downloader
             }
 
             ShowResults();
-
-
-
-
-
-            //webBrowser1.ScriptErrorsSuppressed = true;
-            //webBrowser1.Navigate("http://tsearch.me/global/");
-            //webBrowser1PagePause();
-            //Thread.Sleep(3000);
-            //HtmlElementCollection elmInput, elmA;
-            //elmInput = webBrowser1.Document.GetElementsByTagName("input");
-            //foreach (HtmlElement elmBtn in elmInput)
-            //{
-            //    if (elmBtn.Name == "search")
-            //    {
-            //        elmBtn.InnerText = tbSearch.Text;
-            //        break;
-            //    }
-            //}
-            //webBrowser1PagePause();
-            //foreach (HtmlElement elmBtn in elmInput)
-            //{
-            //    if (elmBtn.GetAttribute("value") == "Поиск")
-            //    {
-            //        elmBtn.InvokeMember("click");
-            //        break;
-            //    }
-            //}
-            //webBrowser1EventPause(3000);
-            //string html = String.Empty;
-            //result.Clear();
-            //elmA = webBrowser1.Document.GetElementsByTagName("a");
-            //foreach (HtmlElement elmBtn in elmA)
-            //{
-            //    if (elmBtn.GetAttribute("classname") == "gs-title" && elmBtn.InnerText != null)
-            //    {
-            //        one_result.name = elmBtn.InnerText;
-            //        one_result.link = elmBtn.GetAttribute("href");
-            //        if (!result.Contains(one_result))
-            //        {
-            //            result.Add(one_result);
-            //        }
-            //    }
-            //}
-            //ShowResults();
-        }
-
-        private void webBrowser1PagePause()
-        {
-            WebBrowserReadyState loadStatus = webBrowser1.ReadyState;
-            while (webBrowser1.IsBusy || webBrowser1.ReadyState != WebBrowserReadyState.Complete)
-            {
-                Application.DoEvents();
-            }
-
-        }
-
-        private void webBrowser1EventPause(int delay)
-        {
-            double time = DateTime.Now.TimeOfDay.TotalMilliseconds;
-            while ((DateTime.Now.TimeOfDay.TotalMilliseconds - time) < delay)
-            {
-                Application.DoEvents();
-            }
         }
 
         private void btnDownload1_Click(object sender, EventArgs e)
@@ -316,6 +250,13 @@ namespace Torrent_downloader
         private void btnDownload10_Click(object sender, EventArgs e)
         {
             OpenLink(result[9].link);
+        }
+
+        private Point MouseHook;
+        private void menuStrip1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
         }
     }
 }

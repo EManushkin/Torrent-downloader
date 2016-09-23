@@ -38,7 +38,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnExpand = new System.Windows.Forms.Button();
             this.btnTurn = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tableResult = new System.Windows.Forms.TableLayoutPanel();
             this.btnDownload10 = new System.Windows.Forms.Button();
             this.btnDownload9 = new System.Windows.Forms.Button();
@@ -97,6 +96,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(987, 55);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseMove);
             // 
             // toolStripMenuItem1
             // 
@@ -184,15 +184,6 @@
             this.btnTurn.TabStop = false;
             this.btnTurn.UseVisualStyleBackColor = false;
             this.btnTurn.Click += new System.EventHandler(this.btnTurn_Click);
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(49, 630);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(364, 146);
-            this.webBrowser1.TabIndex = 1;
-            this.webBrowser1.Visible = false;
             // 
             // tableResult
             // 
@@ -691,7 +682,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(69)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(987, 673);
+            this.ClientSize = new System.Drawing.Size(987, 646);
             this.Controls.Add(this.tableFirstRun);
             this.Controls.Add(this.tableNothingResult);
             this.Controls.Add(this.tableResult);
@@ -701,7 +692,6 @@
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.webBrowser1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TorrentDownloader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -725,7 +715,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnExpand;
         private System.Windows.Forms.Button btnTurn;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.TableLayoutPanel tableResult;
         private System.Windows.Forms.Button btnDownload1;
         private System.Windows.Forms.RichTextBox richTextBox1;

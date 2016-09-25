@@ -93,17 +93,20 @@
             this.howToDownloadToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(987, 55);
+            this.menuStrip1.Size = new System.Drawing.Size(987, 54);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseMove);
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.BackgroundImage")));
+            this.toolStripMenuItem1.AutoSize = false;
+            this.toolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(42, 51);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 50);
             this.toolStripMenuItem1.Text = " ";
             // 
             // fileToolStripMenuItem
@@ -111,7 +114,7 @@
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(59, 51);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(59, 50);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // howToDownloadToolStripMenuItem
@@ -119,7 +122,7 @@
             this.howToDownloadToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.howToDownloadToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.howToDownloadToolStripMenuItem.Name = "howToDownloadToolStripMenuItem";
-            this.howToDownloadToolStripMenuItem.Size = new System.Drawing.Size(203, 51);
+            this.howToDownloadToolStripMenuItem.Size = new System.Drawing.Size(203, 50);
             this.howToDownloadToolStripMenuItem.Text = "How to download";
             // 
             // tbSearch

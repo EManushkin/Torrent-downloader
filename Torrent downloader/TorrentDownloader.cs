@@ -31,15 +31,8 @@ namespace Torrent_downloader
 
         public TorrentDownloader()
         {
-            //The registry key is \HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\ - the keyname is 1400 and the value to disable it is 3, and to enable it is 0.
-            //RegistryKey enableJS = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3", true);
-            //if ((int)enableJS.GetValue("1400") == 3)
-            //{
-            //    enableJS.SetValue("1400", 0);
-            //    enableJS.Close();
-            //}
-
             InitializeComponent();
+            menuStrip1.Renderer = new MyRenderer();
             this.Size = new Size(987, 140);
 
             //Config in this path
@@ -87,6 +80,31 @@ namespace Torrent_downloader
                 this.Show();
             }
 
+        }
+
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyColors()) { }
+        }
+
+        private class MyColors : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected
+            {
+                get { return Color.Yellow; }
+            }
+            public override Color MenuItemSelectedGradientBegin
+            {
+                get { return Color.Orange; }
+            }
+            public override Color MenuItemSelectedGradientEnd
+            {
+                get { return Color.Yellow; }
+            }
+            public override Color MenuItemBorder
+            {
+                get { return Color.Red; }
+            }
         }
 
         private void ShowResults()

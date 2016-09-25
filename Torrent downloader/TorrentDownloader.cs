@@ -31,10 +31,16 @@ namespace Torrent_downloader
 
         public TorrentDownloader()
         {
-            InitializeComponent();
-            menuStrip1.Renderer = new MyRenderer();
-            this.Size = new Size(987, 140);
+            //The registry key is \HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\ - the keyname is 1400 and the value to disable it is 3, and to enable it is 0.
+            //RegistryKey enableJS = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3", true);
+            //if ((int)enableJS.GetValue("1400") == 3)
+            //{
+            //    enableJS.SetValue("1400", 0);
+            //    enableJS.Close();
+            //}
 
+            InitializeComponent();
+            this.Size = new Size(987, 650);
             //Config in this path
             //C:\Users\[User]\AppData\Local\[ProgramName]\[ExeName]_Url_[some_hash]\[Version]\user.config
             if (Properties.Settings.Default.FirstRun == true)
@@ -52,17 +58,17 @@ namespace Torrent_downloader
 
                     tbSearch.ForeColor = System.Drawing.SystemColors.ControlText;
                     tbSearch.Text = name_of_installer;
-                    this.Size = new Size(987, 200);
+                    this.Size = new Size(987, 650);
                     this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
                           (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
 
                     this.richTextBoxFirstRun.Text = name_of_installer;
-                    this.tableFirstRun.Visible = true;
+                    this.panel7.Visible = true;
 
                 }
                 else
                 {
-                    name_of_installer = "  Search for Apps";
+                    name_of_installer = "  Search file ...";
                     this.SetPlaceHolder(tbSearch, name_of_installer);
                 }
 
@@ -76,42 +82,28 @@ namespace Torrent_downloader
             }
             else
             {
-                this.SetPlaceHolder(tbSearch, "  Search for Apps");
+                this.SetPlaceHolder(tbSearch, "  Search file ...");
                 this.Show();
             }
 
-        }
-
-        private class MyRenderer : ToolStripProfessionalRenderer
-        {
-            public MyRenderer() : base(new MyColors()) { }
-        }
-
-        private class MyColors : ProfessionalColorTable
-        {
-            public override Color MenuItemSelected
-            {
-                get { return Color.Yellow; }
-            }
-            public override Color MenuItemSelectedGradientBegin
-            {
-                get { return Color.Orange; }
-            }
-            public override Color MenuItemSelectedGradientEnd
-            {
-                get { return Color.Yellow; }
-            }
-            public override Color MenuItemBorder
-            {
-                get { return Color.Red; }
-            }
         }
 
         private void ShowResults()
         {
             try
             {
-                tableNothingResult.Visible = false;
+                richTextBoxNothing.Visible = false;
+                panel3.Visible = true;
+
+                panel4.Visible = true;
+                panel5.Visible = true;
+                panel6.Visible = true;
+                panel8.Visible = true;
+                panel9.Visible = true;
+                panel10.Visible = true;
+                panel11.Visible = true;
+                panel12.Visible = true;
+                panel13.Visible = true;
 
                 richTextBox1.Text = result[0].name;
                 richTextBox2.Text = result[1].name;
@@ -122,18 +114,17 @@ namespace Torrent_downloader
                 richTextBox7.Text = result[6].name;
                 richTextBox8.Text = result[7].name;
                 richTextBox9.Text = result[8].name;
-                richTextBox10.Text = result[9].name;
 
-                tableResult.Visible = true;
+                panel11.Visible = true;
                 this.Size = new Size(987, 650);
                 this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
                                           (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             }
             catch (Exception)
             {
-                tableResult.Visible = false;
-                tableNothingResult.Visible = true;
-                this.Size = new Size(987, 200);
+                panel11.Visible = false;
+                richTextBoxNothing.Visible = true;
+                this.Size = new Size(987, 650);
                 this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
                                           (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             }
@@ -275,6 +266,21 @@ namespace Torrent_downloader
         {
             if (e.Button != MouseButtons.Left) MouseHook = e.Location;
             Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFirstRun_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

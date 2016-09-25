@@ -31,3 +31,5 @@ C:\Users\1\Desktop\Партнерство\СОФТ\Torrent downloader\obj\Debug\
 C:\Users\1\Desktop\Партнерство\СОФТ\Torrent downloader\obj\Debug\Torrent_downloader.Properties.Resources.resources
 C:\Users\1\Desktop\Партнерство\СОФТ\Torrent downloader\obj\Debug\Torrent_downloader.ValidateAccount.resources
 C:\Users\1\Desktop\Партнерство\СОФТ\Torrent downloader\obj\Debug\Torrent downloader.csproj.GenerateResource.Cache
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Debug\Pbar.dll
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Debug\Pbar.pdb

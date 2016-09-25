@@ -100,7 +100,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Pbar\Pbar.csproj">
+      <Project>{82e3369c-6dae-4fd9-9bf0-6cdfd4993cdb}</Project>
+      <Name>Pbar</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="images\continue1.png" />

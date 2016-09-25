@@ -27,25 +27,24 @@ namespace Torrent_downloader
         }
         private Result one_result; 
         private List<Result> result = new List<Result>();
+        private int percent = 0;
 
 
         public TorrentDownloader()
         {
-            //The registry key is \HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\ - the keyname is 1400 and the value to disable it is 3, and to enable it is 0.
-            //RegistryKey enableJS = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3", true);
-            //if ((int)enableJS.GetValue("1400") == 3)
-            //{
-            //    enableJS.SetValue("1400", 0);
-            //    enableJS.Close();
-            //}
 
             InitializeComponent();
+
+            menuStrip1.Renderer = new MyRenderer();
             this.Size = new Size(987, 650);
+            this.panelSearchResults.Size = new Size(988, 483);
+
             //Config in this path
             //C:\Users\[User]\AppData\Local\[ProgramName]\[ExeName]_Url_[some_hash]\[Version]\user.config
             if (Properties.Settings.Default.FirstRun == true)
             {
                 this.Show();
+
                 this.Enabled = false;
 
                 string name_of_installer;
@@ -58,12 +57,10 @@ namespace Torrent_downloader
 
                     tbSearch.ForeColor = System.Drawing.SystemColors.ControlText;
                     tbSearch.Text = name_of_installer;
-                    this.Size = new Size(987, 650);
-                    this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
-                          (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+                    //this.Size = new Size(987, 650);
+                    //this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
 
                     this.richTextBoxFirstRun.Text = name_of_installer;
-                    this.panel7.Visible = true;
 
                 }
                 else
@@ -72,13 +69,13 @@ namespace Torrent_downloader
                     this.SetPlaceHolder(tbSearch, name_of_installer);
                 }
 
-                Thread.Sleep(1000);
-                var formSignUp = new SignUp();
-                formSignUp.Show();
-                formSignUp.Activate();
-
+                //Thread.Sleep(1000);
                 Properties.Settings.Default.FirstRun = false;
                 Properties.Settings.Default.Save();
+
+                pbar1.Location = new System.Drawing.Point(434, 200);
+                pbar1.Visible = true;
+                timerFirstRun.Enabled = true;
             }
             else
             {
@@ -88,22 +85,62 @@ namespace Torrent_downloader
 
         }
 
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyColors()) { }
+        }
+
+        private class MyColors : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected
+            {
+                get { return Color.MediumSeaGreen; }
+            }
+            public override Color MenuItemSelectedGradientBegin
+            {
+                get { return Color.MediumSeaGreen; }
+            }
+            public override Color MenuItemSelectedGradientEnd
+            {
+                get { return Color.MediumSeaGreen; }
+            }
+            public override Color MenuItemBorder
+            {
+                get { return Color.MediumSeaGreen; }
+            }
+            //public override Color ToolStripBorder
+            //{
+            //    get { return Color.MediumSeaGreen; }
+            //}
+            //public override Color ToolStripForeColor
+            //{
+            //    get { return Color.MediumSeaGreen; }
+            //}
+            //public override Color ToolStripDropDownBackground
+            //{
+            //    get { return Color.SeaGreen; }
+            //}
+            //public override Color ToolStripGradientBegin
+            //{
+            //    get { return Color.MediumSeaGreen; }
+            //}
+            //public override Color ToolStripGradientMiddle
+            //{
+            //    get { return Color.MediumSeaGreen; }
+            //}
+            //public override Color ToolStripGradientEnd
+            //{
+            //    get { return Color.MediumSeaGreen; }
+            //}
+        }
+
+
         private void ShowResults()
         {
             try
             {
-                richTextBoxNothing.Visible = false;
-                panel3.Visible = true;
-
-                panel4.Visible = true;
-                panel5.Visible = true;
-                panel6.Visible = true;
-                panel8.Visible = true;
-                panel9.Visible = true;
-                panel10.Visible = true;
-                panel11.Visible = true;
-                panel12.Visible = true;
-                panel13.Visible = true;
+                panelNothing.Visible = false;
+                
 
                 richTextBox1.Text = result[0].name;
                 richTextBox2.Text = result[1].name;
@@ -115,18 +152,28 @@ namespace Torrent_downloader
                 richTextBox8.Text = result[7].name;
                 richTextBox9.Text = result[8].name;
 
-                panel11.Visible = true;
-                this.Size = new Size(987, 650);
-                this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
-                                          (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+                panelSearchResults.Visible = true;
+
+                //panelResult1.Visible = true;
+                //panelResult2.Visible = true;
+                //panelResult3.Visible = true;
+                //panelResult4.Visible = true;
+                //panelResult5.Visible = true;
+                //panelResult6.Visible = true;
+                //panelResult7.Visible = true;
+                //panelResult8.Visible = true;
+                //panelResult9.Visible = true;
+                //panelSearchResults.Visible = true;
+                //this.Size = new Size(987, 650);
+                //this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             }
             catch (Exception)
             {
-                panel11.Visible = false;
-                richTextBoxNothing.Visible = true;
-                this.Size = new Size(987, 650);
-                this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2,
-                                          (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+                panelSearchResults.Visible = false;
+                panelNothing.Visible = true;
+                //richTextBoxNothing.Visible = true;
+                //this.Size = new Size(987, 650);
+                //this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             }
 
 
@@ -184,9 +231,9 @@ namespace Torrent_downloader
             Application.Exit();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void Torrent_Search()
         {
-            string  url = "http://www.torrentdownloads.me/search/?search=" + tbSearch.Text.Replace(" ", "+");
+            string url = "http://www.torrentdownloads.me/search/?search=" + tbSearch.Text.Replace(" ", "+");
 
             WebClient client = new WebClient();
             client.Encoding = System.Text.Encoding.UTF8;
@@ -199,16 +246,31 @@ namespace Torrent_downloader
 
             foreach (var tag in tags_results)
             {
-                one_result.name = tag.ToString().Substring(tag.ToString().IndexOf(": ") + 2, tag.ToString().IndexOf("\">") - tag.ToString().IndexOf(": ") - 2);
-                one_result.link = "http://www.torrentdownloads.me" + tag.ToString().Substring(tag.ToString().IndexOf("/"), tag.ToString().IndexOf("\" title") - tag.ToString().IndexOf("/"));
-
-                if (!result.Contains(one_result))
+                try
                 {
-                    result.Add(one_result);
+                    one_result.name = tag.ToString().Substring(tag.ToString().IndexOf(": ") + 2, tag.ToString().IndexOf("\">") - tag.ToString().IndexOf(": ") - 2);
+                    one_result.link = "http://www.torrentdownloads.me" + tag.ToString().Substring(tag.ToString().IndexOf("/"), tag.ToString().IndexOf("\" title") - tag.ToString().IndexOf("/"));
+
+                    if (!result.Contains(one_result))
+                    {
+                        result.Add(one_result);
+                    }
                 }
+                catch
+                {
+                }
+
             }
 
             ShowResults();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            panelSearchResults.Visible = false;
+            pbar1.Location = new System.Drawing.Point(434, 200);
+            pbar1.Visible = true;
+            timerSearch.Enabled = true;
         }
 
         private void btnDownload1_Click(object sender, EventArgs e)
@@ -268,19 +330,61 @@ namespace Torrent_downloader
             Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFirstRun_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pbar1.Value == 100)
+            {
+                timerSearch.Stop();
+                pbar1.Visible = false;
+                pbar1.Value = 0;
+                Torrent_Search();
+            }
+            else
+            {
+                pbar1.Value ++;
+            }
+        }
+
+        private void timerFirstRun_Tick(object sender, EventArgs e)
+        {
+            if (pbar1.Value == 100)
+            {
+                timerFirstRun.Stop();
+                pbar1.Visible = false;
+                pbar1.Value = 0;
+
+                panelFirstRun.Visible = true;
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
+            else
+            {
+                pbar1.Value++;
+            }
+        }
+
+        private void howToDownloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //var formSignUp = new SignUp();
+            //formSignUp.Show();
+            //formSignUp.Activate();
+        }
+
+        private void fileToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            fileToolStripMenuItem.ForeColor = Color.SeaGreen;
+        }
+
+        private void fileToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            fileToolStripMenuItem.ForeColor = Color.White;
         }
     }
 }

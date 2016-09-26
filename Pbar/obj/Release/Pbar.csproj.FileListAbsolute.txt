@@ -1,0 +1,6 @@
+D:\FreeLance\Torrent downloader\Project\Pbar\bin\Release\Pbar.dll
+D:\FreeLance\Torrent downloader\Project\Pbar\bin\Release\Pbar.pdb
+D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.Pbar.resources
+D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.csproj.GenerateResource.Cache
+D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.dll
+D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.pdb

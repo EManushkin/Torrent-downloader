@@ -1,14 +1,3 @@
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Awesomium.Core.dll
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Awesomium.Windows.Forms.dll
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Torrent Downloader.exe
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Torrent Downloader.exe.config
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.SignUp.resources
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.TorrentDownloader.resources
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.Properties.Resources.resources
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.ValidateAccount.resources
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent downloader.csproj.GenerateResource.Cache
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.exe
-D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.pdb
 D:\Mann\Torrent Downloader\Torrent downloader\bin\Release\Torrent Downloader.exe.config
 D:\Mann\Torrent Downloader\Torrent downloader\bin\Release\Torrent Downloader.exe
 D:\Mann\Torrent Downloader\Torrent downloader\bin\Release\Torrent Downloader.pdb
@@ -19,3 +8,18 @@ D:\Mann\Torrent Downloader\Torrent downloader\obj\Release\Torrent_downloader.Val
 D:\Mann\Torrent Downloader\Torrent downloader\obj\Release\Torrent downloader.csproj.GenerateResource.Cache
 D:\Mann\Torrent Downloader\Torrent downloader\obj\Release\Torrent Downloader.exe
 D:\Mann\Torrent Downloader\Torrent downloader\obj\Release\Torrent Downloader.pdb
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Torrent Downloader.exe.config
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Torrent Downloader.exe
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Torrent Downloader.pdb
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Pbar.dll
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Release\Pbar.pdb
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent downloader.csprojResolveAssemblyReference.cache
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.AccountInfo.resources
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.HowToDownload.resources
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.SignUp.resources
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.TorrentDownloader.resources
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.Properties.Resources.resources
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_downloader.ValidateAccount.resources
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent downloader.csproj.GenerateResource.Cache
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.exe
+D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.pdb

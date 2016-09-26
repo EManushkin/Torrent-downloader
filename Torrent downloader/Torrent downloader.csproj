@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountInfo.Designer.cs">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowToDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HowToDownload.Designer.cs">
+      <DependentUpon>HowToDownload.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,12 @@
     <Compile Include="ValidateAccount.Designer.cs">
       <DependentUpon>ValidateAccount.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountInfo.resx">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowToDownload.resx">
+      <DependentUpon>HowToDownload.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>

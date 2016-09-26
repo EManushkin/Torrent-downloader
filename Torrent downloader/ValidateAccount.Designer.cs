@@ -198,6 +198,7 @@
             this.Controls.Add(this.labelFillOutFields);
             this.Controls.Add(this.labelValidateAccount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ValidateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validate Account";

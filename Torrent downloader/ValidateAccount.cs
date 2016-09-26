@@ -68,6 +68,7 @@ namespace Torrent_downloader
             {
                 this.Close();
                 Program.formTorrentDownloader.Enabled = true;
+                Program.formTorrentDownloader.panelSearch.Enabled = true;
                 Program.formTorrentDownloader.Activate();
                 //Program.formTorrentDownloader.panel7.Visible = false;
                 Program.formTorrentDownloader.btnSearch.PerformClick();

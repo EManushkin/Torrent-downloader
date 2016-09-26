@@ -157,6 +157,7 @@
             this.accountInfoToolStripMenuItem.Name = "accountInfoToolStripMenuItem";
             this.accountInfoToolStripMenuItem.Size = new System.Drawing.Size(201, 32);
             this.accountInfoToolStripMenuItem.Text = "Account Info";
+            this.accountInfoToolStripMenuItem.Click += new System.EventHandler(this.accountInfoToolStripMenuItem_Click);
             // 
             // howToDownloadToolStripMenuItem
             // 
@@ -233,6 +234,8 @@
             // 
             // richTextBox2
             // 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -243,7 +246,7 @@
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox2.Size = new System.Drawing.Size(630, 31);
+            this.richTextBox2.Size = new System.Drawing.Size(655, 31);
             this.richTextBox2.TabIndex = 14;
             this.richTextBox2.TabStop = false;
             this.richTextBox2.Text = "";
@@ -257,7 +260,7 @@
             this.btnDownload1.FlatAppearance.BorderSize = 0;
             this.btnDownload1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload1.Location = new System.Drawing.Point(677, 8);
+            this.btnDownload1.Location = new System.Drawing.Point(694, 8);
             this.btnDownload1.Name = "btnDownload1";
             this.btnDownload1.Size = new System.Drawing.Size(228, 65);
             this.btnDownload1.TabIndex = 12;
@@ -278,7 +281,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1.Size = new System.Drawing.Size(638, 31);
+            this.richTextBox1.Size = new System.Drawing.Size(655, 31);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.TabStop = false;
             this.richTextBox1.Text = "";
@@ -337,7 +340,7 @@
             this.panelResult1.Location = new System.Drawing.Point(0, 0);
             this.panelResult1.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult1.Name = "panelResult1";
-            this.panelResult1.Size = new System.Drawing.Size(954, 81);
+            this.panelResult1.Size = new System.Drawing.Size(971, 81);
             this.panelResult1.TabIndex = 14;
             // 
             // panelResult2
@@ -351,7 +354,7 @@
             this.panelResult2.Location = new System.Drawing.Point(0, 80);
             this.panelResult2.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult2.Name = "panelResult2";
-            this.panelResult2.Size = new System.Drawing.Size(954, 81);
+            this.panelResult2.Size = new System.Drawing.Size(971, 81);
             this.panelResult2.TabIndex = 15;
             // 
             // btnDownload2
@@ -362,7 +365,7 @@
             this.btnDownload2.FlatAppearance.BorderSize = 0;
             this.btnDownload2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload2.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload2.Location = new System.Drawing.Point(694, 9);
             this.btnDownload2.Name = "btnDownload2";
             this.btnDownload2.Size = new System.Drawing.Size(228, 65);
             this.btnDownload2.TabIndex = 14;
@@ -381,7 +384,7 @@
             this.panelResult3.Location = new System.Drawing.Point(0, 161);
             this.panelResult3.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult3.Name = "panelResult3";
-            this.panelResult3.Size = new System.Drawing.Size(954, 81);
+            this.panelResult3.Size = new System.Drawing.Size(971, 81);
             this.panelResult3.TabIndex = 16;
             // 
             // btnDownload3
@@ -392,7 +395,7 @@
             this.btnDownload3.FlatAppearance.BorderSize = 0;
             this.btnDownload3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload3.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload3.Location = new System.Drawing.Point(694, 9);
             this.btnDownload3.Name = "btnDownload3";
             this.btnDownload3.Size = new System.Drawing.Size(228, 65);
             this.btnDownload3.TabIndex = 15;
@@ -413,7 +416,7 @@
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
             this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox3.Size = new System.Drawing.Size(596, 31);
+            this.richTextBox3.Size = new System.Drawing.Size(655, 31);
             this.richTextBox3.TabIndex = 13;
             this.richTextBox3.TabStop = false;
             this.richTextBox3.Text = "";
@@ -430,7 +433,7 @@
             this.panelResult4.Location = new System.Drawing.Point(0, 241);
             this.panelResult4.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult4.Name = "panelResult4";
-            this.panelResult4.Size = new System.Drawing.Size(954, 81);
+            this.panelResult4.Size = new System.Drawing.Size(971, 81);
             this.panelResult4.TabIndex = 17;
             // 
             // btnDownload4
@@ -441,7 +444,7 @@
             this.btnDownload4.FlatAppearance.BorderSize = 0;
             this.btnDownload4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload4.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload4.Location = new System.Drawing.Point(694, 9);
             this.btnDownload4.Name = "btnDownload4";
             this.btnDownload4.Size = new System.Drawing.Size(228, 65);
             this.btnDownload4.TabIndex = 16;
@@ -463,7 +466,7 @@
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ReadOnly = true;
             this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox4.Size = new System.Drawing.Size(596, 31);
+            this.richTextBox4.Size = new System.Drawing.Size(655, 31);
             this.richTextBox4.TabIndex = 14;
             this.richTextBox4.TabStop = false;
             this.richTextBox4.Text = "";
@@ -495,7 +498,7 @@
             this.richTextBoxFirstRun.Name = "richTextBoxFirstRun";
             this.richTextBoxFirstRun.ReadOnly = true;
             this.richTextBoxFirstRun.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBoxFirstRun.Size = new System.Drawing.Size(672, 31);
+            this.richTextBoxFirstRun.Size = new System.Drawing.Size(630, 31);
             this.richTextBoxFirstRun.TabIndex = 13;
             this.richTextBoxFirstRun.TabStop = false;
             this.richTextBoxFirstRun.Text = "";
@@ -509,12 +512,13 @@
             this.btnFirstRun.FlatAppearance.BorderSize = 0;
             this.btnFirstRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirstRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnFirstRun.Location = new System.Drawing.Point(711, 9);
+            this.btnFirstRun.Location = new System.Drawing.Point(694, 9);
             this.btnFirstRun.Name = "btnFirstRun";
             this.btnFirstRun.Size = new System.Drawing.Size(228, 65);
             this.btnFirstRun.TabIndex = 12;
             this.btnFirstRun.TabStop = false;
             this.btnFirstRun.UseVisualStyleBackColor = false;
+            this.btnFirstRun.Click += new System.EventHandler(this.btnFirstRun_Click);
             // 
             // panelResult5
             // 
@@ -527,7 +531,7 @@
             this.panelResult5.Location = new System.Drawing.Point(-1, 322);
             this.panelResult5.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult5.Name = "panelResult5";
-            this.panelResult5.Size = new System.Drawing.Size(955, 81);
+            this.panelResult5.Size = new System.Drawing.Size(971, 81);
             this.panelResult5.TabIndex = 19;
             // 
             // btnDownload5
@@ -538,7 +542,7 @@
             this.btnDownload5.FlatAppearance.BorderSize = 0;
             this.btnDownload5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload5.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload5.Location = new System.Drawing.Point(694, 9);
             this.btnDownload5.Name = "btnDownload5";
             this.btnDownload5.Size = new System.Drawing.Size(228, 65);
             this.btnDownload5.TabIndex = 15;
@@ -559,7 +563,7 @@
             this.richTextBox5.Name = "richTextBox5";
             this.richTextBox5.ReadOnly = true;
             this.richTextBox5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox5.Size = new System.Drawing.Size(597, 31);
+            this.richTextBox5.Size = new System.Drawing.Size(655, 31);
             this.richTextBox5.TabIndex = 13;
             this.richTextBox5.TabStop = false;
             this.richTextBox5.Text = "";
@@ -576,7 +580,7 @@
             this.panelResult6.Location = new System.Drawing.Point(0, 402);
             this.panelResult6.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult6.Name = "panelResult6";
-            this.panelResult6.Size = new System.Drawing.Size(954, 81);
+            this.panelResult6.Size = new System.Drawing.Size(971, 81);
             this.panelResult6.TabIndex = 20;
             // 
             // btnDownload6
@@ -587,7 +591,7 @@
             this.btnDownload6.FlatAppearance.BorderSize = 0;
             this.btnDownload6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload6.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload6.Location = new System.Drawing.Point(694, 9);
             this.btnDownload6.Name = "btnDownload6";
             this.btnDownload6.Size = new System.Drawing.Size(228, 65);
             this.btnDownload6.TabIndex = 16;
@@ -609,7 +613,7 @@
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.ReadOnly = true;
             this.richTextBox6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox6.Size = new System.Drawing.Size(596, 31);
+            this.richTextBox6.Size = new System.Drawing.Size(655, 31);
             this.richTextBox6.TabIndex = 14;
             this.richTextBox6.TabStop = false;
             this.richTextBox6.Text = "";
@@ -626,7 +630,7 @@
             this.panelResult7.Location = new System.Drawing.Point(-1, 483);
             this.panelResult7.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult7.Name = "panelResult7";
-            this.panelResult7.Size = new System.Drawing.Size(954, 81);
+            this.panelResult7.Size = new System.Drawing.Size(971, 81);
             this.panelResult7.TabIndex = 21;
             // 
             // btnDownload7
@@ -637,7 +641,7 @@
             this.btnDownload7.FlatAppearance.BorderSize = 0;
             this.btnDownload7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload7.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload7.Location = new System.Drawing.Point(694, 9);
             this.btnDownload7.Name = "btnDownload7";
             this.btnDownload7.Size = new System.Drawing.Size(228, 65);
             this.btnDownload7.TabIndex = 15;
@@ -658,7 +662,7 @@
             this.richTextBox7.Name = "richTextBox7";
             this.richTextBox7.ReadOnly = true;
             this.richTextBox7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox7.Size = new System.Drawing.Size(596, 31);
+            this.richTextBox7.Size = new System.Drawing.Size(655, 31);
             this.richTextBox7.TabIndex = 13;
             this.richTextBox7.TabStop = false;
             this.richTextBox7.Text = "";
@@ -698,7 +702,7 @@
             this.panelResult9.Location = new System.Drawing.Point(0, 644);
             this.panelResult9.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult9.Name = "panelResult9";
-            this.panelResult9.Size = new System.Drawing.Size(954, 81);
+            this.panelResult9.Size = new System.Drawing.Size(971, 81);
             this.panelResult9.TabIndex = 20;
             // 
             // btnDownload9
@@ -709,7 +713,7 @@
             this.btnDownload9.FlatAppearance.BorderSize = 0;
             this.btnDownload9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload9.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload9.Location = new System.Drawing.Point(694, 9);
             this.btnDownload9.Name = "btnDownload9";
             this.btnDownload9.Size = new System.Drawing.Size(228, 65);
             this.btnDownload9.TabIndex = 15;
@@ -730,7 +734,7 @@
             this.richTextBox9.Name = "richTextBox9";
             this.richTextBox9.ReadOnly = true;
             this.richTextBox9.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox9.Size = new System.Drawing.Size(596, 31);
+            this.richTextBox9.Size = new System.Drawing.Size(655, 31);
             this.richTextBox9.TabIndex = 13;
             this.richTextBox9.TabStop = false;
             this.richTextBox9.Text = "";
@@ -747,7 +751,7 @@
             this.panelResult8.Location = new System.Drawing.Point(0, 563);
             this.panelResult8.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult8.Name = "panelResult8";
-            this.panelResult8.Size = new System.Drawing.Size(954, 81);
+            this.panelResult8.Size = new System.Drawing.Size(971, 81);
             this.panelResult8.TabIndex = 21;
             // 
             // btnDownload8
@@ -758,7 +762,7 @@
             this.btnDownload8.FlatAppearance.BorderSize = 0;
             this.btnDownload8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDownload8.Location = new System.Drawing.Point(677, 9);
+            this.btnDownload8.Location = new System.Drawing.Point(694, 9);
             this.btnDownload8.Name = "btnDownload8";
             this.btnDownload8.Size = new System.Drawing.Size(228, 65);
             this.btnDownload8.TabIndex = 16;
@@ -780,7 +784,7 @@
             this.richTextBox8.Name = "richTextBox8";
             this.richTextBox8.ReadOnly = true;
             this.richTextBox8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox8.Size = new System.Drawing.Size(596, 31);
+            this.richTextBox8.Size = new System.Drawing.Size(655, 31);
             this.richTextBox8.TabIndex = 14;
             this.richTextBox8.TabStop = false;
             this.richTextBox8.Text = "";
@@ -803,7 +807,7 @@
             // timerSearch
             // 
             this.timerSearch.Interval = 50;
-            this.timerSearch.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timerSearch.Tick += new System.EventHandler(this.timerSearch_Tick);
             // 
             // pbar1
             // 
@@ -839,6 +843,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TorrentDownloader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Torrent Downloader";
@@ -877,7 +882,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
         public System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.Panel panelSerchText;
         private System.Windows.Forms.Panel panelResult1;
         private System.Windows.Forms.Panel panelResult3;
@@ -913,6 +917,7 @@
         private System.Windows.Forms.Timer timerSearch;
         private System.Windows.Forms.Timer timerFirstRun;
         private System.Windows.Forms.ToolStripMenuItem accountInfoToolStripMenuItem;
+        public System.Windows.Forms.Panel panelSearch;
     }
 }
 

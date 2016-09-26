@@ -23,11 +23,11 @@ namespace Torrent_downloader
         private struct Result
         {
             public string name;
-            public string link;
+            public string link_page;
+            public string link_torrent;
         }
         private Result one_result; 
         private List<Result> result = new List<Result>();
-        private int percent = 0;
 
 
         public TorrentDownloader()
@@ -44,8 +44,8 @@ namespace Torrent_downloader
             if (Properties.Settings.Default.FirstRun == true)
             {
                 this.Show();
-
-                this.Enabled = false;
+                panelSearch.Enabled = false;
+                tbSearch.Visible = false;
 
                 string name_of_installer;
 
@@ -108,30 +108,6 @@ namespace Torrent_downloader
             {
                 get { return Color.MediumSeaGreen; }
             }
-            //public override Color ToolStripBorder
-            //{
-            //    get { return Color.MediumSeaGreen; }
-            //}
-            //public override Color ToolStripForeColor
-            //{
-            //    get { return Color.MediumSeaGreen; }
-            //}
-            //public override Color ToolStripDropDownBackground
-            //{
-            //    get { return Color.SeaGreen; }
-            //}
-            //public override Color ToolStripGradientBegin
-            //{
-            //    get { return Color.MediumSeaGreen; }
-            //}
-            //public override Color ToolStripGradientMiddle
-            //{
-            //    get { return Color.MediumSeaGreen; }
-            //}
-            //public override Color ToolStripGradientEnd
-            //{
-            //    get { return Color.MediumSeaGreen; }
-            //}
         }
 
 
@@ -153,17 +129,6 @@ namespace Torrent_downloader
                 richTextBox9.Text = result[8].name;
 
                 panelSearchResults.Visible = true;
-
-                //panelResult1.Visible = true;
-                //panelResult2.Visible = true;
-                //panelResult3.Visible = true;
-                //panelResult4.Visible = true;
-                //panelResult5.Visible = true;
-                //panelResult6.Visible = true;
-                //panelResult7.Visible = true;
-                //panelResult8.Visible = true;
-                //panelResult9.Visible = true;
-                //panelSearchResults.Visible = true;
                 //this.Size = new Size(987, 650);
                 //this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             }
@@ -249,12 +214,14 @@ namespace Torrent_downloader
                 try
                 {
                     one_result.name = tag.ToString().Substring(tag.ToString().IndexOf(": ") + 2, tag.ToString().IndexOf("\">") - tag.ToString().IndexOf(": ") - 2);
-                    one_result.link = "http://www.torrentdownloads.me" + tag.ToString().Substring(tag.ToString().IndexOf("/"), tag.ToString().IndexOf("\" title") - tag.ToString().IndexOf("/"));
-
+                    one_result.link_page = "http://www.torrentdownloads.me" + tag.ToString().Substring(tag.ToString().IndexOf("/"), tag.ToString().IndexOf("\" title") - tag.ToString().IndexOf("/"));
+                    string page_torrent = client.DownloadString(one_result.link_page);
+                    one_result.link_torrent = Regex.Match(page_torrent, @"(?<=<a rel=""nofollow"" href="")(http://itorrents.org/torrent.*?)(?="">)").ToString();
                     if (!result.Contains(one_result))
                     {
                         result.Add(one_result);
                     }
+                    if (result.Count == 9) break; //9 - так как в форме выводим всего 9 результатов. Если менять, то и тут не забываем!!!
                 }
                 catch
                 {
@@ -267,6 +234,8 @@ namespace Torrent_downloader
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            panelFirstRun.Visible = false;
+            panelNothing.Visible = false;
             panelSearchResults.Visible = false;
             pbar1.Location = new System.Drawing.Point(434, 200);
             pbar1.Visible = true;
@@ -275,52 +244,52 @@ namespace Torrent_downloader
 
         private void btnDownload1_Click(object sender, EventArgs e)
         {
-            OpenLink(result[0].link);
+            OpenLink(result[0].link_torrent);
         }
 
         private void btnDownload2_Click(object sender, EventArgs e)
         {
-            OpenLink(result[1].link);
+            OpenLink(result[1].link_torrent);
         }
 
         private void btnDownload3_Click(object sender, EventArgs e)
         {
-            OpenLink(result[2].link);
+            OpenLink(result[2].link_torrent);
         }
 
         private void btnDownload4_Click(object sender, EventArgs e)
         {
-            OpenLink(result[3].link);
+            OpenLink(result[3].link_torrent);
         }
 
         private void btnDownload5_Click(object sender, EventArgs e)
         {
-            OpenLink(result[4].link);
+            OpenLink(result[4].link_torrent);
         }
 
         private void btnDownload6_Click(object sender, EventArgs e)
         {
-            OpenLink(result[5].link);
+            OpenLink(result[5].link_torrent);
         }
 
         private void btnDownload7_Click(object sender, EventArgs e)
         {
-            OpenLink(result[6].link);
+            OpenLink(result[6].link_torrent);
         }
 
         private void btnDownload8_Click(object sender, EventArgs e)
         {
-            OpenLink(result[7].link);
+            OpenLink(result[7].link_torrent);
         }
 
         private void btnDownload9_Click(object sender, EventArgs e)
         {
-            OpenLink(result[8].link);
+            OpenLink(result[8].link_torrent);
         }
 
         private void btnDownload10_Click(object sender, EventArgs e)
         {
-            OpenLink(result[9].link);
+            OpenLink(result[9].link_torrent);
         }
 
         private Point MouseHook;
@@ -332,11 +301,15 @@ namespace Torrent_downloader
 
         private void btnFirstRun_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            var formSignUp = new SignUp();
+            formSignUp.Show();
+            formSignUp.Activate();
 
         }
 
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timerSearch_Tick(object sender, EventArgs e)
         {
             if (pbar1.Value == 100)
             {
@@ -358,11 +331,8 @@ namespace Torrent_downloader
                 timerFirstRun.Stop();
                 pbar1.Visible = false;
                 pbar1.Value = 0;
-
+                tbSearch.Visible = true;
                 panelFirstRun.Visible = true;
-                var formSignUp = new SignUp();
-                formSignUp.Show();
-                formSignUp.Activate();
             }
             else
             {
@@ -372,9 +342,16 @@ namespace Torrent_downloader
 
         private void howToDownloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //var formSignUp = new SignUp();
-            //formSignUp.Show();
-            //formSignUp.Activate();
+            Form formHowToDownload = new HowToDownload();
+            formHowToDownload.Show();
+            formHowToDownload.Activate();
+        }
+
+        private void accountInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formAccountInfo = new AccountInfo();
+            formAccountInfo.Show();
+            formAccountInfo.Activate();
         }
 
         private void fileToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
@@ -386,5 +363,7 @@ namespace Torrent_downloader
         {
             fileToolStripMenuItem.ForeColor = Color.White;
         }
+
+
     }
 }

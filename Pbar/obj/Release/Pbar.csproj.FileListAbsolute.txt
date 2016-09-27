@@ -4,3 +4,10 @@ D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.Pbar.resources
 D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.csproj.GenerateResource.Cache
 D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.dll
 D:\FreeLance\Torrent downloader\Project\Pbar\obj\Release\Pbar.pdb
+D:\Mann\Torrent Downloader\Pbar\bin\Release\Pbar.dll
+D:\Mann\Torrent Downloader\Pbar\bin\Release\Pbar.pdb
+D:\Mann\Torrent Downloader\Pbar\obj\Release\Pbar.Pbar.resources
+D:\Mann\Torrent Downloader\Pbar\obj\Release\Pbar.csproj.GenerateResource.Cache
+D:\Mann\Torrent Downloader\Pbar\obj\Release\Pbar.dll
+D:\Mann\Torrent Downloader\Pbar\obj\Release\Pbar.pdb
+D:\Mann\Torrent Downloader\Pbar\obj\Release\Pbar.csprojResolveAssemblyReference.cache

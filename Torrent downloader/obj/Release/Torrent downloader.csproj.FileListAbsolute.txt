@@ -23,3 +23,8 @@ D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent_d
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent downloader.csproj.GenerateResource.Cache
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.exe
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Release\Torrent Downloader.pdb
+D:\Mann\Torrent Downloader\Torrent downloader\bin\Release\Pbar.dll
+D:\Mann\Torrent Downloader\Torrent downloader\bin\Release\Pbar.pdb
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Release\Torrent downloader.csprojResolveAssemblyReference.cache
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Release\Torrent_downloader.AccountInfo.resources
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Release\Torrent_downloader.HowToDownload.resources

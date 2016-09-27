@@ -35,3 +35,7 @@ D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Debug\Pbar.dll
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\bin\Debug\Pbar.pdb
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Debug\Torrent_downloader.AccountInfo.resources
 D:\FreeLance\Torrent downloader\Project\Torrent downloader\obj\Debug\Torrent_downloader.HowToDownload.resources
+D:\Mann\Torrent Downloader\Torrent downloader\bin\Debug\Pbar.dll
+D:\Mann\Torrent Downloader\Torrent downloader\bin\Debug\Pbar.pdb
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent_downloader.AccountInfo.resources
+D:\Mann\Torrent Downloader\Torrent downloader\obj\Debug\Torrent_downloader.HowToDownload.resources

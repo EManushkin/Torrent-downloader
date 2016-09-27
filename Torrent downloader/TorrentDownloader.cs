@@ -70,8 +70,6 @@ namespace Torrent_downloader
                 }
 
                 //Thread.Sleep(1000);
-                Properties.Settings.Default.FirstRun = false;
-                Properties.Settings.Default.Save();
 
                 pbar1.Location = new System.Drawing.Point(434, 200);
                 pbar1.Visible = true;

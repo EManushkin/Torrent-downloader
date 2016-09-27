@@ -67,8 +67,10 @@ namespace Torrent_downloader
                 mtbCVV2.Text != String.Empty && mtbCVV2.Text != " CVV2") 
             {
                 this.Close();
-                Properties.Settings.Default.FirstRun = false;
+
+                Properties.Settings.Default.Registration = true;
                 Properties.Settings.Default.Save();
+
                 Program.formTorrentDownloader.Enabled = true;
                 Program.formTorrentDownloader.panelSearch.Enabled = true;
                 Program.formTorrentDownloader.Activate();

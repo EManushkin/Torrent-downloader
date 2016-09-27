@@ -44,7 +44,7 @@ namespace Torrent_downloader
             if (Properties.Settings.Default.FirstRun == true)
             {
                 this.Show();
-                panelSearch.Enabled = false;
+                //panelSearch.Enabled = false;
                 tbSearch.Visible = false;
 
                 string name_of_installer;
@@ -69,11 +69,11 @@ namespace Torrent_downloader
                     this.SetPlaceHolder(tbSearch, name_of_installer);
                 }
 
-                //Thread.Sleep(1000);
-
                 pbar1.Location = new System.Drawing.Point(434, 200);
                 pbar1.Visible = true;
                 timerFirstRun.Enabled = true;
+                Properties.Settings.Default.FirstRun = false;
+                Properties.Settings.Default.Save();
             }
             else
             {
@@ -240,54 +240,153 @@ namespace Torrent_downloader
             timerSearch.Enabled = true;
         }
 
+        private bool IsRegistration()
+        {
+            if (Properties.Settings.Default.Registration == true)
+            {
+                return true;
+            }
+            return false;
+        }
+
         private void btnDownload1_Click(object sender, EventArgs e)
         {
-            OpenLink(result[0].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[0].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload2_Click(object sender, EventArgs e)
         {
-            OpenLink(result[1].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[1].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload3_Click(object sender, EventArgs e)
         {
-            OpenLink(result[2].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[2].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload4_Click(object sender, EventArgs e)
         {
-            OpenLink(result[3].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[3].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload5_Click(object sender, EventArgs e)
         {
-            OpenLink(result[4].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[4].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload6_Click(object sender, EventArgs e)
         {
-            OpenLink(result[5].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[5].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload7_Click(object sender, EventArgs e)
         {
-            OpenLink(result[6].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[6].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload8_Click(object sender, EventArgs e)
         {
-            OpenLink(result[7].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[7].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload9_Click(object sender, EventArgs e)
         {
-            OpenLink(result[8].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[8].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private void btnDownload10_Click(object sender, EventArgs e)
         {
-            OpenLink(result[9].link_torrent);
+            if (Properties.Settings.Default.Registration == true)
+            {
+                OpenLink(result[9].link_torrent);
+            }
+            else
+            {
+                var formSignUp = new SignUp();
+                formSignUp.Show();
+                formSignUp.Activate();
+            }
         }
 
         private Point MouseHook;
@@ -299,7 +398,7 @@ namespace Torrent_downloader
 
         private void btnFirstRun_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
+            //this.Enabled = false;
             var formSignUp = new SignUp();
             formSignUp.Show();
             formSignUp.Activate();

@@ -806,7 +806,7 @@
             // 
             // timerSearch
             // 
-            this.timerSearch.Interval = 50;
+            this.timerSearch.Interval = 5;
             this.timerSearch.Tick += new System.EventHandler(this.timerSearch_Tick);
             // 
             // pbar1
@@ -823,7 +823,7 @@
             // 
             // timerFirstRun
             // 
-            this.timerFirstRun.Interval = 50;
+            this.timerFirstRun.Interval = 5;
             this.timerFirstRun.Tick += new System.EventHandler(this.timerFirstRun_Tick);
             // 
             // TorrentDownloader

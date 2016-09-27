@@ -121,6 +121,7 @@
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
+            this.Deactivate += new System.EventHandler(this.SignUp_Deactivate);
             this.ResumeLayout(false);
             this.PerformLayout();
 

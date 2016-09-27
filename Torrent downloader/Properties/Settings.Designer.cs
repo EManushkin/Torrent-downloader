@@ -34,5 +34,17 @@ namespace Torrent_downloader.Properties {
                 this["FirstRun"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Registration {
+            get {
+                return ((bool)(this["Registration"]));
+            }
+            set {
+                this["Registration"] = value;
+            }
+        }
     }
 }

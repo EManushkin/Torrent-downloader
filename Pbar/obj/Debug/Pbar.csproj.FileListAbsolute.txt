@@ -11,3 +11,4 @@ D:\Mann\Torrent Downloader\Pbar\obj\Debug\Pbar.Pbar.resources
 D:\Mann\Torrent Downloader\Pbar\obj\Debug\Pbar.csproj.GenerateResource.Cache
 D:\Mann\Torrent Downloader\Pbar\obj\Debug\Pbar.dll
 D:\Mann\Torrent Downloader\Pbar\obj\Debug\Pbar.pdb
+D:\FreeLance\Torrent downloader\Project\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache

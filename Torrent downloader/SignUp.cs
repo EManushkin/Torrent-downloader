@@ -45,9 +45,15 @@ namespace Torrent_downloader
                 tbPassword.Text != String.Empty && tbPassword.Text != "   Password (+6 Characters)")
             {
                 this.Close();
+                Program.formTorrentDownloader.Enabled = false;
                 var formValidateAccount = new ValidateAccount();
                 formValidateAccount.Show();
             }
+        }
+
+        private void SignUp_Deactivate(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
